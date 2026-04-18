@@ -397,7 +397,7 @@ def run_transform(
         round(unique_token_count / token_count, 4) if token_count > 0 else 0.0
     )
     LOG.info(f"  type_token_ratio:    {type_token_ratio}")
-    LOG.info(f"  top 20 tokens:       {tokens[:20]}")
+    LOG.info(f"  top 15 tokens:       {tokens[:15]}")
 
     LOG.info("========================")
     LOG.info("PHASE 3.4: Build record and create DataFrame")

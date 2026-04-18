@@ -36,7 +36,6 @@ Run from root project folder with:
 
   uv run python -m nlp.pipeline_web_html
 """
-
 # ============================================================
 # Section 1. Setup and Imports
 # ============================================================
@@ -45,7 +44,7 @@ import logging
 
 from datafun_toolkit.logger import get_logger, log_header, log_path
 
-from nlp.config_case import (
+from nlp.config_mahesh import (
     DATA_PATH,
     HTTP_REQUEST_HEADERS,
     PAGE_URL,
@@ -56,8 +55,8 @@ from nlp.config_case import (
     ROOT_PATH,
 )
 from nlp.stage01_extract import run_extract
-from nlp.stage02_validate_case import run_validate
-from nlp.stage03_transform_case import run_transform
+from nlp.stage02_validate_mahesh import run_validate
+from nlp.stage03_transform_mahesh import run_transform
 from nlp.stage04_analyze_case import run_analyze
 from nlp.stage05_load import run_load
 
@@ -67,9 +66,8 @@ from nlp.stage05_load import run_load
 
 LOG: logging.Logger = get_logger("CI", level="DEBUG")
 
-
 # ============================================================
-# Section 3. Define Main Pipeline Function
+# Section 3. Main Pipeline
 # ============================================================
 
 
@@ -124,7 +122,7 @@ def main() -> None:
 
 
 # ============================================================
-# Section 4. Run Main Function when This File is Executed
+# Entry Point
 # ============================================================
 
 if __name__ == "__main__":
